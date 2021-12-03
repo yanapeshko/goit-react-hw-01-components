@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FriendListItem from './FriendListItem';
-import styles from './FriendList.module.css';
+import FriendListItem from '../FriendListItem/FriendListItem';
+import s from './FriendList.module.css';
 
 const FriendList = ({ friendsData }) => {
   return (
     friendsData.length > 0 && (
-      <ul className={styles.friendList}>{friendsData.map(FriendListItem)}</ul>
+      <ul className={s.friendList}>{friendsData.map(FriendListItem)}</ul>
     )
   );
 };

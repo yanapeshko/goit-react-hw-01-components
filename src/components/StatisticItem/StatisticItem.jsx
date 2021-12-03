@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Statistics.module.css';
-import onRandomColorGenerator from '../../helpers/generators/onRandomColorGenerator';
+import { getRandomColor } from '../../helpers/generators/getRandomColor';
+import s from './StatisticItem.module.css';
 
 const StatisticItem = ({ item, colors }) => {
   return (
     <li
       key={item.id}
-      className={styles.item}
+      className={s.item}
       style={{
-        backgroundColor: colors[onRandomColorGenerator(0, colors.length - 1)],
+        backgroundColor: colors[getRandomColor(0, colors.length - 1)],
       }}
     >
-      <span className={styles.label}>{item.label}</span>
-      <span className={styles.percentage}>{item.percentage}%</span>
+      <span className={s.label}>{item.label}</span>
+      <span className={s.percentage}>{item.percentage}%</span>
     </li>
   );
 };

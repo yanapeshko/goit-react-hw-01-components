@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './Profile.module.css';
-import ProfileStats from './ProfileStats';
+import ProfileStats from '../ProfileStats/ProfileStats.jsx';
+import s from './Profile.module.css';
 
 const Profile = ({ user }) => {
   const { username, tag, location, avatar, stats } = user;
   return (
-    <div className={styles.profile}>
-      <div className={styles.description}>
-        <img src={avatar} alt={username} className={styles.avatar} />
-        <p className={styles.name}>{username}</p>
-        <p className={styles.tag}>@{tag}</p>
-        <p className={styles.location}>{location}</p>
+    <div className={s.profile}>
+      <div className={s.description}>
+        <img src={avatar} alt={username} className={s.avatar} />
+        <p className={s.name}>{username}</p>
+        <p className={s.tag}>@{tag}</p>
+        <p className={s.location}>{location}</p>
       </div>
 
       <ProfileStats {...stats} />

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Profile.module.css';
+import styles from './ProfileStats.module.css';
 import PropTypes from 'prop-types';
 
 const ProfileItem = ({ followers, views, likes }) => {
